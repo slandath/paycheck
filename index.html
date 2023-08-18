@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Paycheck Calculator</title>
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container-1">
+            <form>
+                <div class="earnings-container">
+                    <h2>Earnings</h2>
+                    <label for="frequency" class="label">Pay Frequency</label>
+                    <select name="frequency" id="frequency" class="input">
+                        <option value="52">Weekly</option>
+                        <option value="26">Bi-Weekly</option>
+                        <option value="24">Semi-Monthly</option>
+                        <option value="12">Monthly</option>
+                    </select>
+                    <br />
+                    <label for="earningGross" class="label">Paycheck Gross</label>
+                    <input type="number" class="input" id="earningGross" min="0" value="0" />
+                </div>
+                <div class="tax-container">
+                    <h2>Taxes</h2>
+                    <hr />
+                    <h3>Federal</h3>
+                    <br />
+                    <input type="checkbox" class="input-checkbox" id="jobs" value="yes" />
+                    <label for="jobs">I work more than one job</label>
+                    <br />
+                    <label for="w4Type" class="label">W4 Type</label>
+                    <select name="w4Type" id="w4Type" class="input">
+                        <option value="current">2020 or newer</option>
+                    </select>
+                    <br />
+                    <label for="fedFiling" class="label-filing">Filing Status</label>
+                    <select name="fedFiling" id="fedFiling" class="input">
+                        <option value="single">Single or Married filing separately</option>
+                        <option value="married">Married filing jointly or Qualifying surviving spouse</option>
+                        <option value="house">Head of Household</option>
+                    </select>
+                    <br />
+                    <label for="dependentAmount" class="label">Dependent Amount</label>
+                    <input type="number" class="input" id="dependentAmount" min="0" value="0" />
+                    <br />
+                    <label for="otherIncomeAmount" class="label">Other Income Amount</label>
+                    <input type="number" class="input" id="otherIncomeAmount" min="0" value="0" />
+                    <br />
+                    <label for="deductionAmount" class="label">Deduction Amount</label>
+                    <input type="number" class="input" id="deductionAmount" min="0" value="0" />
+                    <br />
+                    <label for="fedAddWithAmount" class="label">Additional Withholding Amount</label>
+                    <input type="number" class="input" id="fedAddWithAmount" min="0" value="0" />
+                    <hr />
+                    <h3>State</h3>
+                    <label for="state" class="label">State of Residence</label>
+                    <select name="state" id="state" class="input">
+                        <option value="MI">Michigan</option>
+                    </select>
+                    <br />
+                    <label for="stateExemptions" class="label">Number of Exemptions</label>
+                    <input type="number" class="input" id="stateExemptions" min="0" max="8" value="0" />
+                    <br />
+                    <label for="stateAddWithAmount" class="label">Additional Withholding Amount</label>
+                    <input type="number" class="input" id="stateAddWithAmount" min="0" value="0" />
+                </div>
+            </form>
+        </div>
+        <div class="container-2">
+            <div class="pretax-container">
+                <h2>Pre-Tax Deductions</h2>
+                <label for="insurance" class="label">Insurance + HSA/FSA</label>
+                <input type="number" class="input" id="insurance" />
+                <br />
+                <label for="retirementTypePre" class="label">401(k) or 403(b)</label>
+                <select name="retirementTypePre" id="retirementTypePre" class="input">
+                    <option value="amount">$</option>
+                    <option value="percent">%</option>
+                </select>
+                <input type="number" class="input" id="retirementAmountPre" />
+            </div>
+            <div class="posttax-container">
+                <h2>Post-Tax Deductions</h2>
+                <label for="retirementTypePost" class="label">Roth 401(k) or 403(b)</label>
+                <select name="retirementTypePost" id="retirementTypePost" class="input">
+                    <option value="amount">$</option>
+                    <option value="percent">%</option>
+                </select>
+                <input type="number" class="input" id="retirementAmountPost" />
+                <br />
+                <label for="misc" class="label">Everything Else</label>
+                <input type="number" class="input" id="misc" />
+            </div>
+            <div class="net-container">
+                <h2>Paycheck Totals</h2>
+                <table>
+                    <tr>
+                        <td>Federal Income Tax</td>
+                        <td id="fedTax">0</td>
+                    </tr>
+                    <tr>
+                        <td>Social Security Tax</td>
+                        <td id="ssTax">0</td>
+                    </tr>
+                    <tr>
+                        <td>Medicare Tax</td>
+                        <td id="medTax">0</td>
+                    </tr>
+                    <tr>
+                        <td>State Income Tax</td>
+                        <td id="stateTax">0</td>
+                    </tr>
+                    <tr class="result-row">
+                        <td>Net Pay</td>
+                        <td id="paycheckNet">0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

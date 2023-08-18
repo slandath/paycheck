@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 75rem;
+    min-width: 34.375rem;
+    margin: 0 auto;
+    background-color: #202020;
+    color: lightgray;
+}
+table {
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0.75rem;
+}
+
+th {
+    background-color: #808080;
+    color: black;
+}
+
+h3 {
+    margin-top: 0.75rem;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container-1 {
+    grid-column: 1;
+}
+
+.container-2 {
+    grid-column: 2;
+}
+
+.earnings-container,
+.tax-container,
+.net-container,
+.pretax-container,
+.posttax-container {
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.select-group-heading,
+.select-group-heading-block {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.input,
+.label {
+    margin-top: 1rem;
+}
+
+.input {
+    padding: 0.5rem;
+    border: 1px solid gray;
+    border-radius: 0.25rem;
+    background-color: #202020;
+    color: lightgray;
+}
+
+.input-checkbox {
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid gray;
+    border-radius: 0.25rem;
+    background-color: #202020;
+    color: lightgray;
+}
+
+.label {
+    margin-right: 0.5rem;
+}
+
+.result {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: green;
+    border-radius: 2rem;
+}
+
+.result-label {
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.result-row {
+    background-color: lightgreen;
+    color: black;
+    font-weight: bold;
+}
+@media (max-width: 1100px) {
+    body {
+        display: block;
+    }
+}
